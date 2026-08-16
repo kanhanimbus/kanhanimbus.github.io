@@ -1,0 +1,5 @@
+---
+title: 'Purple Haze'
+description: 'Excuse me, while I kiss the sky'
+---
+The entirety of Are You Experienced? is stellar, but my personal favorite has to be Purple Haze. Although the lyrics are about love, and/or psychedelic experiences, my mind doesn't register all of them and instead chooses to think of singular lyrics. Specifically, "Excuse me, while I kiss the sky". This particular lyric defines the feel and meaning of the song for me, as opposed to what the lyrics say overall. With the help of that singular lyric and Jimi Hendrix's sky-shattering guitar, Purple Haze sounds like the story of a man who has surpassed all of his limits, be it physical, mental, or societal; and now that man revels in the near God-like light of his own talent. This interpretation of mine is, strangely enough, in line with what Jimi Hendrix was. It is a song that is more of an ideal for me, as opposed to being an actual song with meaningful lyrics of its own. Whenever I am feeling down, or unmotivated, I play this song. It reminds me of what I want to be; someone who surpasses all his limits.

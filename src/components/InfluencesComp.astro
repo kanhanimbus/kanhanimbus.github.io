@@ -1,0 +1,74 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+const Influences = await getCollection('blogInfluences');
+---
+<div class="bgColorCont">
+    <div class="titleInfluences">
+      <h1>My Influences</h1>
+    </div>
+    <div class="articleNames">
+      <ul>
+      {Influences.map(post => (
+      <li><a href={`/influences/${post.id}`} class = "linkInfluences">{post.data.title}</a><br>{post.data.description}</li>
+      ))}
+    </ul>
+    </div>
+</div>
+
+<style>
+  ul {
+    list-style-type: none;
+    line-height: 24px;
+  }
+  li {
+    border-radius: 30px;
+    background-color: #fcbe14;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    text-shadow: none; 
+    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+  }
+  .linkInfluences {
+    font-size: 20px;
+  }
+  .titleInfluences {
+    border: 2px solid #FFcb3b;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-variant: small-caps;
+    background-color: #1b1bad;
+    color: #ffcb3b;
+    text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
+    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+  }
+  .articleNames {
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 2px solid #ffe52c;
+    border-radius: 30px;
+    flex-direction: column;
+    flex: 9 1 1;
+    background-color: #1b1bad;
+    overflow: auto;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
+    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+  }
+  .bgColorCont {
+        border-radius: 30px;
+        /* background-color: #ffe52c; */
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+</style>

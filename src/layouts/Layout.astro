@@ -1,23 +1,55 @@
-<!doctype html>
-<html lang="en">
+---
+import LinksColumn from "../components/LinksColumn.astro"
+import SubjectColumn from "../components/SubjectColumn.astro"
+---
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title></title>
 	</head>
 	<body>
-		<slot />
+		<div class = "flex-container">
+			<div class = "content-container">
+				<LinksColumn/>
+				<SubjectColumn>
+					<slot/>
+				</SubjectColumn>
+			</div>
+		</div>
 	</body>
 </html>
-
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600&family=Open+Sans:wght@400;600&family=Comfortaa:wght@400;600;700&display=swap');
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+	height: 100%;
+	border: 2px solid black;
+	border-radius: 30px;
+	background-color: #1b1bad;
+}
+
+html {
+	background-color: black;
 	}
+
+h1, h2, h3 {
+  font-family: 'Nunito', 'Cabin', 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+body {
+  font-family: 'Nunito Sans', 'Open Sans', 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
 </style>
+	

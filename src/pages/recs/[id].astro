@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import ArticleLayout from "../../layouts/WritingsLayout.astro"
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const posts = await getCollection('blogRecs');
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout>
+  <ArticleLayout>
+    <nav aria-label="Breadcrumb" class="breadcrumb" slot = "goBack">
+    <ol>
+      <li class="breadcrumbs__item">
+        <a href="/" class="breadcrumb__link">Home</a>
+        </li>
+        <li class = "breadcrumb-separator">></li>
+        <li>
+          <a href="/recs" class="breadcrumb__link">Recs
+      </a>
+      </li>
+      <li class = "breadcrumb-separator">></li>
+      <li><span aria-current="page">{post.data.title}</span></li>
+    </ol>
+    </nav>
+      <div class = "headingRecs
+  " slot = "title">
+        <span>{post.data.title}
+          </span>
+      </div>
+      <Content slot = "bodyArticle"/>
+  </ArticleLayout>
+</Layout>
+
+<style>
+  .breadcrumb {
+  padding: 5px;
+  /* flex: 1; */
+  /* display: flex; */
+  align-items: center;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex: 1;  
+}
+.breadcrumb-separator {
+  display: inline-block;
+  margin: 0 0.25rem;
+  /* content: "→"; */
+  background-color: #1b1bad;
+  color: #FFe52c;
+}
+  /* .breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "→";
+  } */
+li {
+  background-color: #FFe52c;
+  border-radius: 30px;
+  padding: 5px;
+  color: #1b1bad;
+}
+
+  .directoryDisp {
+        border-radius: 30px;
+        background-color: #1b1bad;
+        width: 3%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        border: 2px solid #FFe52c;
+        color: #FFe52c
+    }
+  .headingRecs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    flex: 1 1 0;
+    text-align: center;
+  }
+  span {
+   display: inline-block;
+   vertical-align: middle;
+   line-height: normal;
+  }
+</style>

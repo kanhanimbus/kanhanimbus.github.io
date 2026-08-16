@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<div class="bgColorCont">
+    <div class = "goBack"><slot name = "goBack"/></div>
+    <div class = "picture-title-container">
+        <div class = "title">
+            <slot name = "title"/>
+        </div>
+</div>
+<div class = "bodyArticle" >
+        <slot name = "bodyArticle"/>
+</div>
+</div>  
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600&family=Open+Sans:wght@400;600&family=Comfortaa:wght@400;600;700&display=swap');
+     .goBack {
+        border-radius: 30px;
+        background-color: #1b1bad;
+        display: flex;
+        /*flex: 1;*/
+        text-align: center;
+        border: 2px solid #ffcb3b;
+        color: #ffcb3b
+    }
+    .bgColorCont {
+        border-radius: 30px;
+        background-color: #ffcb3b;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .picture-title-container {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 0;
+    }
+    .picture {
+        width: 20%;
+        aspect-ratio: 1/1; 
+        border: 2px solid #ffcb3b;
+        border-radius: 30px;
+        flex: 1 1 0;
+        text-align: center;
+    }
+    .title {
+        border: 2px solid #ffcb3b;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        flex: 4 1 0;
+        text-align: center;
+        font-size: large;
+        background-color: #1b1bad;
+    }
+    .bodyArticle {
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 2px solid #ffcb3b;
+        border-radius: 30px;
+        flex-direction: column;
+        flex: 4 1 0;
+        background-color: #1b1bad;
+        font-size: 20px;
+        overflow: auto;
+    }
+    h1, h2, h3 {
+  font-family: 'Nunito', 'Cabin', 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+body {
+  font-family: 'Nunito Sans', 'Open Sans', 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+</style>
