@@ -1,27 +1,4 @@
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
-
-.links-column {
-    border: 2px solid #630075;
-    color: #b204d1;
-    background-color: black;
-    flex: 1 1 0;
-}
-
-.subject-column {
-    border: 2px solid #630075;
-    color: #b204d1;
-    background-color: black;
-    flex: 8 1 0;
-}
-
-.links-column-item {
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    border: 2px solid;
-    border-radius: 20px;
+.fit-image {
+    width: 100%;
+    height: auto;
 }

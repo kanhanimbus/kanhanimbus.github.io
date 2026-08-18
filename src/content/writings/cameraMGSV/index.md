@@ -3,12 +3,13 @@ title: "Metal Gear Solid V's Curious Camerawork"
 description: "Appreciation for MGSV's camerawork"
 pubDate: 28-Jul-26
 ---
+
 Camerawork is an important aspect of any visual media. From video games, to movies, to TV series, and in a way, even books, the camera provides a window into the fictional setting. After having consumed a considerable amount of media, I have gained much appreciation for the camerawork of Metal Gear Solid V: The Phantom Pain in particular. But in order to express my appreciation effectively, I must go over some of the things I have noticed about cameras in media. 
 
 ## The Styles of Camerawork I have noticed:
 
 ### 1. The 'Steady' Camera:
-![An image from The Good, The Bad, The Ugly, showcasing the steady camera style](steadyCam.png)
+![An image from The Good, The Bad, The Ugly, showcasing the steady camera style](steadyCam.png) 
 Examples of this kind of camerawork would be The Matrix trilogy and old kung-fu movies (generally any pre-2000s movie, really.) Although these entries have fast moving cameras when needed, such as a pan from the hero to the villain, or for dramatic moments where the camera zooms in, or zooms out, or my personal favorite, does a dolly zoom, these movies generally have stable cameras where the subject of the shot and the subject's actions can be clearly made out. They have a general clarity which is needed to show the viewer all the actions occurring in the scene. 
 ### 2. The 'Shaky' Camera:
 ![An image from The Bourne Identity, showcasing the shaky camera style](shakyCam.png)
@@ -27,3 +28,4 @@ Some of the more important techniques are as follows:
 ![An image from Metal Gear Solid V (2015), showcasing the utilisation of the Lens Flare effect](mgsvLensFlare.jpg)
 2. Slow Panning:
    MGSV is a lot slower in terms of pacing compared to its predecessors, in both gameplay and cutscenes. The camera contributes to this heavily, with the fast panning of the steady camera being replaced by the slow panning of a shaky camera. This allows for a tenser suspense buildup, better scene absorption and greater immersion within the scene.
+
