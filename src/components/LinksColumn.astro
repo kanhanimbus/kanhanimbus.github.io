@@ -1,11 +1,14 @@
 
     <div class = "links-column">    		
-        <a href = "/" class = "logo">Insert Logo Here</a>
+        <a href = "/" class = "logo">kanhaNimbus</a>
+        <div class="buttonDiv">
         <a href = "/about" class = "links-button">about me</a>
         <a href = "/writings/" class = "links-button">my writings</a>
         <a href = "/influences/" class = "links-button">my influences</a>
         <a href = "/recs/" class = "links-button">recommendations</a>
         <a href = "/logs/" class = "links-button">my logs</a>
+        </div>
+        <div class="webrings">Stay Tuned</div>
     </div>
 
 
@@ -25,16 +28,16 @@ body {
   font-size: 1rem;
 }
 .logo {
-    padding: 30px;
-    text-align: center;
-    margin: 40px;
-    border: 2px solid #ffcb3b;
-    border-radius: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center; 
+    font-size: 30px;
     color: #ffcb3b;
     cursor: pointer;
     display: block;
-    text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
-    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+    text-shadow: none; 
 }
 
 .links-column {
@@ -50,16 +53,27 @@ body {
     box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
 }
 
+.buttonDiv {
+    align-content: center;
+    flex: 4;
+}
+
+.webrings {
+    flex: 1;
+
+}
+
 .links-button {
     padding: 10px;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
     border: 2px solid #ffcb3b;
     border-radius: 20px;
     cursor: pointer;
     display: block;
-    color: #ffcb3b;
-    text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
+    color: blue;
+    background-color: #fcbe14;
+    text-shadow: none;
     box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
 }
 

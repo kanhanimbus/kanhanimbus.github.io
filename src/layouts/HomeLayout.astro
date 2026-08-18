@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div class = "flex-container">
+			<div class = "content-container">
+				<slot/>
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600&family=Open+Sans:wght@400;600&family=Comfortaa:wght@400;600;700&display=swap');
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.content-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border: 2px solid #ffcb3b;
+	border-radius: 30px;
+	background-color: #1b1bad;
+}
+
+html {
+	background-color: black;
+	}
+
+h1, h2, h3 {
+  font-family: 'Nunito', 'Cabin', 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+body {
+  font-family: 'Nunito Sans', 'Open Sans', 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+</style>
+	
