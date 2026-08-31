@@ -1,9 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro"
-import ArticleLayout from "../../layouts/WritingsLayout.astro"
+import Layout from "@/layouts/Layout.astro"
+import ArticleLayout from "@/layouts/InfluencesLayout.astro"
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
-  const posts = await getCollection('blogWritings');
+  const posts = await getCollection('blogInfluences');
   return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
@@ -12,6 +12,8 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+
 ---
 <Layout>
   <ArticleLayout>
@@ -22,7 +24,11 @@ const { Content } = await render(post);
         </li>
         <li class = "breadcrumb-separator">></li>
         <li>
-          <a href="/writings" class="breadcrumb__link">Writings</a>
+          <a href="/writings/" class="breadcrumb__link">Writings</a>
+      </li>
+      <li class = "breadcrumb-separator">></li>
+        <li>
+          <a href="/writings/influences" class="breadcrumb__link">Influences</a>
       </li>
       <li class = "breadcrumb-separator">></li>
       <li><span aria-current="page">{post.data.title}</span></li>
@@ -39,6 +45,8 @@ const { Content } = await render(post);
 <style>
   .breadcrumb {
   padding: 5px;
+  /* flex: 1; */
+  /* display: flex; */
   align-items: center;
 }
 
@@ -58,7 +66,11 @@ const { Content } = await render(post);
   background-color: #1b1bad;
   color: #FFe52c;
 }
-
+  /* .breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "→";
+  } */
 li {
   background-color: #FFe52c;
   border-radius: 30px;

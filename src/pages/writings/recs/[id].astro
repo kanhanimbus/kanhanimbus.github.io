@@ -1,12 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro"
-import ArticleLayout from "../../layouts/InfluencesLayout.astro"
+import Layout from "@/layouts/Layout.astro"
+import ArticleLayout from "@/layouts/WritingsLayout.astro"
 import { getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
-
-
 export async function getStaticPaths() {
-  const posts = await getCollection('blogInfluences');
+  const posts = await getCollection('blogRecs');
   return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
@@ -15,8 +12,6 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-
-
 ---
 <Layout>
   <ArticleLayout>
@@ -26,14 +21,20 @@ const { Content } = await render(post);
         <a href="/" class="breadcrumb__link">Home</a>
         </li>
         <li class = "breadcrumb-separator">></li>
+        <li class="breadcrumbs__item">
+        <a href="/writings" class="breadcrumb__link">Writings</a>
+        </li>
+        <li class = "breadcrumb-separator">></li>
         <li>
-          <a href="/influences" class="breadcrumb__link">Influences</a>
+          <a href="/writings/recs" class="breadcrumb__link">Recs
+      </a>
       </li>
       <li class = "breadcrumb-separator">></li>
       <li><span aria-current="page">{post.data.title}</span></li>
     </ol>
     </nav>
-      <div class = "headingInfluences" slot = "title">
+      <div class = "headingRecs
+  " slot = "title">
         <span>{post.data.title}
           </span>
       </div>
@@ -88,7 +89,7 @@ li {
         border: 2px solid #FFe52c;
         color: #FFe52c
     }
-  .headingInfluences {
+  .headingRecs {
     display: flex;
     justify-content: center;
     align-items: center;

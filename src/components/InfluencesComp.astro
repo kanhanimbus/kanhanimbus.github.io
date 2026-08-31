@@ -9,7 +9,7 @@ const Influences = await getCollection('blogInfluences');
     <div class="articleNames">
       <ul>
       {Influences.map(post => (
-      <li><a href={`/influences/${post.id}`} class = "linkInfluences">{post.data.title}</a><br>{post.data.description}</li>
+      <li><a href={`/writings/influences/${post.id}`} class = "linkInfluences">{post.data.title}</a><br>{post.data.description}</li>
       ))}
     </ul>
     </div>

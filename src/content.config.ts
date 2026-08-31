@@ -2,8 +2,8 @@ import { defineCollection } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const blogWritings = defineCollection({
-    loader: glob({ base: './src/content/writings', pattern: '**/*.{md,mdx}'}),
+const blogEssays = defineCollection({
+    loader: glob({ base: './src/content/writings/essays', pattern: '**/*.{md,mdx}'}),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -13,7 +13,7 @@ const blogWritings = defineCollection({
 });
 
 const blogInfluences = defineCollection({
-    loader: glob({ base: './src/content/influences', pattern: '**/*.{md,mdx}'}),
+    loader: glob({ base: './src/content/writings/influences', pattern: '**/*.{md,mdx}'}),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -23,7 +23,7 @@ const blogInfluences = defineCollection({
 });
 
 const blogLogs = defineCollection({
-    loader: glob({ base: './src/content/logs', pattern: '**/*.{md,mdx}'}),
+    loader: glob({ base: './src/content/writings/logs', pattern: '**/*.{md,mdx}'}),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -33,7 +33,7 @@ const blogLogs = defineCollection({
 });
 
 const blogRecs = defineCollection({
-    loader: glob({ base: './src/content/recs', pattern: '**/*.{md,mdx}'}),
+    loader: glob({ base: './src/content/writings/recs', pattern: '**/*.{md,mdx}'}),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -42,4 +42,4 @@ const blogRecs = defineCollection({
     }),
 });
 
-export const collections = { blogWritings, blogInfluences, blogLogs, blogRecs };
+export const collections = { blogEssays, blogInfluences, blogLogs, blogRecs };

@@ -10,7 +10,7 @@ const Recs = await getCollection('blogRecs');
     <div class="articleNames">
       <ul>
       {Recs.map(post => (
-      <li><a href={`/recs/${post.id}`} class = "linkRecs">{post.data.title}</a><br>{post.data.description}</li>
+      <li><a href={`/writings/recs/${post.id}`} class = "linkRecs">{post.data.title}</a><br>{post.data.description}</li>
       ))}
       </ul>
     </div>

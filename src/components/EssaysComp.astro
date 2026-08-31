@@ -1,14 +1,18 @@
 ---
 import { getCollection, getEntry, render } from "astro:content";
-const Recs = await getCollection('blogRecs');
+const Writings = await getCollection('blogEssays');
 ---
 
 <div class="bgColorCont">
-    <div class="linksContainer">
-        <a href = "/writings/essays" class = "links-button">my essays</a>
-        <a href = "/writings/influences/" class = "links-button">my influences</a>
-        <a href = "/writings/recs/" class = "links-button">recommendations</a>
-        <a href = "/writings/logs/" class = "links-button">my logs</a>
+    <div class="titleWritings">
+      <h1>Things I have written</h1>
+    </div>
+    <div class="articleNames">
+      <ul>
+      {Writings.map(post => (
+      <li><a href={`/writings/essays/${post.id}`} class = "linkWritings">{post.data.title}</a><br>{post.data.description}</li>
+      ))}
+      </ul>
     </div>
 </div>
 
@@ -27,34 +31,27 @@ const Recs = await getCollection('blogRecs');
     padding-left: 25px;
     padding-bottom: 8px;
     font-size: 15px;
-    text-shadow: none;
+    text-shadow: none; 
     box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
   }
-  .linksContainer {
+  .linkWritings {
+    font-size: 20px;
+  }
+  .titleWritings {
+        border: 2px solid #FFcb3b;
         border-radius: 30px;
         display: flex;
         flex-direction: column;
         flex: 1 1 0;
         text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        font-variant: small-caps;
         background-color: #1b1bad;
+        color: #ffcb3b;
+        text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
+        box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
   }
-  .links-button {
-    border: 5px solid #ffcb3b;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-    border: 2px solid #ffcb3b;
-    border-radius: 30px;
-    cursor: pointer;
-    display: block;
-    color: blue;
-    flex: 1 1 0;
-    align-content: center;
-    background-color: #fcbe14;
-    font-size: 40px;
-    text-shadow: none;
-    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
-}
   .articleNames {
         padding-left: 16px;
         padding-right: 16px;
@@ -65,7 +62,7 @@ const Recs = await getCollection('blogRecs');
         background-color: #1b1bad;
         overflow: auto;
         font-size: 20px;
-        text-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+        text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
         box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
   }
   .bgColorCont {
@@ -74,7 +71,5 @@ const Recs = await getCollection('blogRecs');
         display: flex;
         flex-direction: column;
         flex: 1;
-        /* text-shadow: 1px 1px 5px orange, 1px 1px 5px black;
-        box-shadow: 1px 1px 5px orange, 1px 1px 5px black; */
     }
 </style>
