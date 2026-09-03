@@ -65,6 +65,7 @@ const { Content } = await render(post);
   /* content: "→"; */
   background-color: #1b1bad;
   color: #FFe52c;
+  box-shadow: none;
 }
   /* .breadcrumb li:not(:last-child)::after {
   display: inline-block;
@@ -72,10 +73,14 @@ const { Content } = await render(post);
   content: "→";
   } */
 li {
-  background-color: #FFe52c;
+  background-color: #fcbe14;
   border-radius: 30px;
   padding: 5px;
   color: #1b1bad;
+  box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
   .directoryDisp {
@@ -101,5 +106,8 @@ li {
    display: inline-block;
    vertical-align: middle;
    line-height: normal;
+  }
+  a {
+    text-decoration: none;
   }
 </style>

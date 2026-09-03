@@ -25,6 +25,32 @@
         padding-right: 30%;
         margin-bottom: 10vh;
     }
+    @media screen and (max-device-aspect-ratio: 1/1){
+        .linksRow {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 10vh;
+    }
+    .linksButton {
+        width: auto;
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        border: 2px solid #ffcb3b;
+        border-radius: 30px;
+        cursor: pointer;
+        color: blue;
+        background-color: #fcbe14;
+        text-shadow: none;
+        box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+        font-style: italic;
+        font-weight: bolder;
+        font-size: 30px !important;
+    }
+    }
     .linksButton {
         width: auto;
         flex: 1;
@@ -38,5 +64,11 @@
         background-color: #fcbe14;
         text-shadow: none;
         box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+        font-style: italic;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    a {
+        text-decoration: none;
     }
 </style>

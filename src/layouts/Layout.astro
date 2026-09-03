@@ -35,7 +35,24 @@ import SubjectColumn from "../components/SubjectColumn.astro"
 	border-radius: 30px;
 	background-color: #1b1bad;
 }
+@media screen and (max-device-aspect-ratio: 1/1) {
+	.flex-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: inherit;
+	}
 
+.content-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border: 2px solid #ffcb3b;
+	border-radius: 30px;
+	background-color: #1b1bad;
+	overflow: auto;
+}
+}
 html {
 	background-color: black;
 	}

@@ -34,7 +34,8 @@ body {
     color: #ffcb3b;
     cursor: pointer;
     display: block;
-    text-shadow: none; 
+    text-shadow: 1px 1px 3px black; 
+    text-decoration: underline;
 }
 
 .links-column {
@@ -64,14 +65,76 @@ body {
     padding: 10px;
     text-align: center;
     margin: 20px;
+    font-size: 18px;
     border: 2px solid #ffcb3b;
     border-radius: 20px;
     cursor: pointer;
     display: block;
     color: blue;
     background-color: #fcbe14;
-    text-shadow: none;
+    text-shadow: none;    
+    font-weight: bolder;
+    font-style: italic;
+    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+}
+a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-device-aspect-ratio: 1/1) {
+    .logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center; 
+    font-size: 80px;
+    color: #ffcb3b;
+    cursor: pointer;
+    display: block;
+    text-shadow: 1px 1px 3px black; 
+    text-decoration: underline;
+}
+
+.links-column {
+    background-color: #1b1bad;
+    border: 2px solid #ffcb3b;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    padding: 10px;
+    margin-right: 10px;
+    text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
     box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
 }
 
+.buttonDiv {
+    align-content: center;
+    flex: 4;
+    display: inline-block;
+}
+
+.webrings {
+    flex: 1;
+
+}
+
+.links-button {
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    border: 2px solid #ffcb3b;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    color: blue;
+    background-color: #fcbe14;
+    text-shadow: none;    
+    font-weight: bolder;
+    font-style: italic;
+    box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+}
+  }
 </style>
