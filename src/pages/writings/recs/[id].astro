@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
+<head><title>{post.data.title}</title></head>
 <Layout>
   <ArticleLayout>
     <nav aria-label="Breadcrumb" class="breadcrumb" slot = "goBack">
@@ -75,6 +76,7 @@ const { Content } = await render(post);
 li {
   background-color: #fcbe14;
   border-radius: 30px;
+  text-shadow: none;
   padding: 10px;
   color: #1b1bad;
   box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
