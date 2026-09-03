@@ -12,6 +12,6 @@ export default defineConfig({
   },
 
   integrations: [mdx(), markdoc()],
-  site: 'https://kanhanimbus.github.io/website',
+  site: 'https://kanhanimbus.github.io/',
   base: ''
 })
