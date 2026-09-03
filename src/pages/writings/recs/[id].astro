@@ -75,7 +75,7 @@ const { Content } = await render(post);
 li {
   background-color: #fcbe14;
   border-radius: 30px;
-  padding: 5px;
+  padding: 10px;
   color: #1b1bad;
   box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
   font-size: 18px;
@@ -109,5 +109,11 @@ li {
   }
   a {
     text-decoration: none;
+  }
+  
+  @media screen and (max-device-aspect-ratio: 1/1) {
+    li {
+      font-size: 20px;
+    }
   }
 </style>

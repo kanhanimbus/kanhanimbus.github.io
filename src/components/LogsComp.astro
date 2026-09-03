@@ -74,4 +74,42 @@ const Logs = await getCollection('blogLogs');
         /* text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
         box-shadow: 1px 1px 5px orange, 1px 1px 5px black; */
     }
+    
+    @media screen and (max-device-aspect-ratio: 1/1) {
+      .titleLogs {
+        border: 2px solid #FFcb3b;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        font-variant: small-caps;
+        background-color: #1b1bad;
+        color: #ffcb3b;
+        text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
+        box-shadow: 1px 1px 5px orange, 1px 1px 5px black;
+  }
+  .articleNames {
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 2px solid #ffcb3b;
+        border-radius: 30px;
+        flex-direction: column;
+        flex: 9 1 1;
+        background-color: #1b1bad;
+        overflow: auto;
+        font-size: 20px;
+        text-shadow: 1px 1px 5px orange, 1px 1px 5px black; 
+        box-shadow: 1px 1px 5px orange, 1px 1px 5px black;       
+  }
+  li {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .linkLogs {
+    font-size: 25px;
+  }
+    }
 </style>

@@ -42,6 +42,7 @@
         text-align: center;
         font-size: large;
         background-color: #1b1bad;
+        padding: 30px;
     }
     .bodyArticle {
         padding-left: 16%;
@@ -51,7 +52,7 @@
         flex-direction: column;
         flex: 4 1 0;
         background-color: #1b1bad;
-        overflow: auto;
+        /* overflow: auto; */
         font-size: 20px;
         img {
             width: 100%;
@@ -68,5 +69,13 @@ body {
   font-family: 'Nunito Sans', 'Open Sans', 'Source Sans 3', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+}
+
+@media screen and (max-device-aspect-ratio: 1/1) {
+    .bodyArticle {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 25px;
+    }
 }
 </style>

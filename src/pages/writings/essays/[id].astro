@@ -51,7 +51,7 @@ const { Content } = await render(post);
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0; 
   align-items: center;
   flex: 1;  
 }
@@ -101,5 +101,11 @@ li {
   }
   a {
     text-decoration: none;
+  }
+
+  @media screen and (max-device-aspect-ratio: 1/1) {
+    li {
+      font-size: 20px;
+    }
   }
 </style>
