@@ -10,11 +10,11 @@ export async function GET(kanhanimbus) {
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
     items: blog.map((post) => ({
-      title: post.data.title,
-      description: post.data.description,
-      // Compute RSS link from post `id`
-      // This example assumes all posts are rendered as `/blog/[id]` routes
-      link: `/writings/essays/${post.id}/`,
+    title: post.data.title,
+    description: post.data.description,
+    // Compute RSS link from post `id`
+    // This example assumes all posts are rendered as `/blog/[id]` routes
+    link: `/writings/${post.id}/`,
     })),
   });
 }
