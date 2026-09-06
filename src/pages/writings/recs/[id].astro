@@ -1,4 +1,5 @@
 ---
+import FormattedDate from "@/components/FormattedDate.astro";
 import Layout from "@/layouts/Layout.astro"
 import ArticleLayout from "@/layouts/WritingsLayout.astro"
 import { getCollection, render } from 'astro:content';
@@ -11,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+  const { Content } = await render(post);
 ---
 <head><title>{post.data.title}</title></head>
 <Layout>
@@ -34,11 +35,11 @@ const { Content } = await render(post);
       <li><span aria-current="page">{post.data.title}</span></li>
     </ol>
     </nav>
-      <div class = "headingRecs
-  " slot = "title">
+      <div class = "headingRecs" slot = "title">
         <span>{post.data.title}
           </span>
       </div>
+      <div class="pubDate" slot = "title">Published on: <FormattedDate date = {post.data.pubDate}/></div>
       <Content slot = "bodyArticle"/>
   </ArticleLayout>
 </Layout>

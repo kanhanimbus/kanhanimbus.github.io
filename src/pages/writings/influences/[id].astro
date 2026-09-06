@@ -1,4 +1,5 @@
 ---
+import FormattedDate from "@/components/FormattedDate.astro";
 import Layout from "@/layouts/Layout.astro"
 import ArticleLayout from "@/layouts/InfluencesLayout.astro"
 import { getCollection, render } from 'astro:content';
@@ -39,6 +40,7 @@ const { Content } = await render(post);
         <span>{post.data.title}
           </span>
       </div>
+      <div class="pubDate" slot = "title">Published on: <FormattedDate date = {post.data.pubDate}/></div>
       <Content slot = "bodyArticle"/>
   </ArticleLayout>
 </Layout>

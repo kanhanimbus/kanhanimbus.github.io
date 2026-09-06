@@ -1,7 +1,7 @@
 ---
 title: "Metal Gear Solid V's Curious Camerawork"
 description: "Appreciation for MGSV's camerawork"
-pubDate: 28-Jul-26
+pubDate: 2026-07-28 
 ---
 
 Camerawork is an important aspect of any visual media. From video games, to movies, to TV series, and in a way, even books, the camera provides a window into the fictional setting. After having consumed a considerable amount of media, I have gained much appreciation for the camerawork of Metal Gear Solid V: The Phantom Pain in particular. But in order to express my appreciation effectively, I must go over some of the things I have noticed about cameras in media. 

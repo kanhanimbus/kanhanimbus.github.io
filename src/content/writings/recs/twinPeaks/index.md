@@ -1,6 +1,7 @@
 ---
 title: 'Twin Peaks'
 description: 'Why you should watch Twin Peaks'
+pubDate: 2026-09-02
 ---
 ![A poster of Twin Peaks featuring Laura Palmer's photo and Agent Dale Cooper](twinPeaks.png)
 

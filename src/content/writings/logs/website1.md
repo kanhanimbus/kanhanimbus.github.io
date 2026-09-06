@@ -1,6 +1,7 @@
 ---
 title: "Website Log #1"
-description: Initial design inspirations 
+description: Initial design inspirations
+pubDate: 2026-08-25 
 ---
 
 I have started this log ages after I actually started creating the website... I'm near to the end of creation of my website... but I'm gonna try my best to write down details of the process.

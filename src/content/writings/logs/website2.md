@@ -1,6 +1,7 @@
 ---
 title: "Website Log #2"
-description: A list of all the mistakes I made 
+description: A list of all the mistakes I made
+pubDate: 2026-08-25  
 ---
 
 This writeup has even less structure than the last one, because these mistakes don't range in the order of biggest to smallest (even if I may say so for hyperbole). And even then, a lot of these mistakes were important for my growth as a programmer. All of these things that occurred may be mistakes, but they were *my* mistakes. Perhaps you shall make different mistakes. Perhaps you'll have a different programming style. In any case, this is mostly just a writeup of things I perceive as 'mistakes' and how they were important they were for me to understand what the hell I am doing. 
