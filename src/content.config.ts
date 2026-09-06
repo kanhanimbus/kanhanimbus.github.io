@@ -17,7 +17,7 @@ const blogInfluences = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        pubDate: z.date(),
+        pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
     }),
 });
@@ -27,7 +27,7 @@ const blogLogs = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        pubDate: z.date(),
+        pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
     }),
 });
@@ -37,7 +37,7 @@ const blogRecs = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        pubDate: z.date(),
+        pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
     }),
 });
@@ -47,7 +47,7 @@ const blog = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        pubDate: z.date(),
+        pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
     }),
 });
