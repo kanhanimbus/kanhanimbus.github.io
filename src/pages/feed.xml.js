@@ -10,7 +10,8 @@ const parser = new MarkdownIt({
 
 
 export async function GET(context) {
-    const blog = await getCollection('blog');
+    let blog = await getCollection('blog');
+    blog = blog.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
   return rss({
     title: "kanhaNimbus's ramblings",
     description: "esoteric nonsense, brought to you by kanhaNimbus",    
