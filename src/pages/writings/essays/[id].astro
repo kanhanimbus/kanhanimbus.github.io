@@ -4,7 +4,9 @@ import Layout from "@/layouts/Layout.astro"
 import ArticleLayout from "@/layouts/WritingsLayout.astro"
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
-  const posts = await getCollection('blogEssays');
+  let posts = (await getCollection('blogEssays'))
+          .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  
   return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
