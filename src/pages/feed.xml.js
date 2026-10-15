@@ -21,10 +21,6 @@ export async function GET(context) {
       pubDate: post.data.pubDate,
       description: post.data.description,
       link: `/writings/${post.id}/`,
-      content: sanitizeHtml(parser.render(post.body), {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img'])
-      }),
-          ...post.data
-    })),
+    }))
   });
 }
